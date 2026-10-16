@@ -1,0 +1,34 @@
+# Reproduce-only inputs; the pinned weights are fetched by scripts/prepare.py.
+__pycache__/
+*.pyc
+.venv/
+.venv-*/
+.cache/
+.models/
+.tools/
+artifacts/
+.pytest_cache/
+.hypothesis/
+.ruff_cache/
+*.egg-info/
+AGENTS.md
+results_local*.json
+mobileclip2_b.ts
+
+# Internal audits, diagnostic ledgers, and experiment records
+report/audit_*.json
+report/report_local.json
+report/findings.md
+report/evidence.json
+report/vision_comparison.json
+report/benchmark_summary.json
+
+# Diagnostic probe and inspection scripts
+scripts/test_apertus_vision.py
+scripts/probe_mask_proposals.py
+scripts/examine.py
+tests/test_mask_proposal_probe.py
+
+# Container execution files (untracked for submission)
+Dockerfile
+Makefile

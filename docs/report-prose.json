@@ -1,0 +1,241 @@
+{
+  "team": "Grounded Intent",
+  "hardware": "One NVIDIA GeForce RTX 4070 Ti with 12 GB VRAM; Linux under WSL2. The complete local pipeline shares this GPU through sequential perception and language-model loading.",
+  "models": {
+    "apertus": {
+      "repo": "andreasmartin/apertus-v1.5-8b-text-Q8_0-GGUF",
+      "revision": "2028c3184c0fa060b4259b33ee25e836da6896e5",
+      "quantization": "Apertus 1.5 8B, Q8_0, non-thinking; temperature 0, top_p 1"
+    },
+    "vision": {
+      "repo": "unsloth/Qwen3.5-9B-MTP-GGUF",
+      "revision": "9716a636ee4bddc3fed678220b7a33dd2a4160ae",
+      "quantization": "Qwen3.5-9B, UD-Q4_K_XL; F16 image projector; host MTP drafting"
+    },
+    "segmenter": "facebook/sam2.1-hiera-small@ee5bba1d82bb8749febdf90f45e84b687142ba03"
+  },
+  "method": "Apertus interprets the instruction and proposes grounded goals. Image-only Qwen, YOLOE and SAM2 supply visual observations. Explicit downstream language heuristics can correct those goals; a deterministic compiler and verifier handle symbolic action order. This is a hybrid system, not an Apertus-only planner or a motion controller.",
+  "verification": {
+    "docker": "The reported cold run used the host, not Docker. The current Dockerfile disables MTP drafting with VISION_MTP_MAX=0; it was not rebuilt for this report. Host and container output equivalence is not established by this run."
+  },
+  "failures": [
+    {
+      "instruction": "Independent local control: Pick up the green cone.",
+      "observation": "The full TaskProgram interface repeated the same invalid cross-field representation on three bounded attempts, despite complete strict-schema responses.",
+      "mitigation": "Separate role, attribute and relation questions composed valid programs on 3/3 simple controls. Quantity was fixed by the harness; the result did not validate a full parser. Evidence E1."
+    },
+    {
+      "instruction": "Local matched containment/support pair: in versus on the shallow box",
+      "observation": "Apertus emitted on for both instructions (1/2 correct), with exact target and destination phrases. Self-review left the error unchanged.",
+      "mitigation": "A relation-only output recovered the distinction on 2/2 controls. The smaller interface was promising, not a general semantic guarantee. Evidence E2."
+    },
+    {
+      "instruction": "Remote development diagnostic: arbitrary-choice permission",
+      "observation": "A general prompt clarification improved a matched set from 9/10 to 10/10, but both prompts scored 7/10 on fresh wording.",
+      "mitigation": "Retain fresh transfer controls. A repair on its motivating examples is not proof of generalization. Remote diagnostics are not local submission measurements. Evidence E3."
+    },
+    {
+      "instruction": "Remote development smoke: pick up the blue cube",
+      "observation": "Apertus 70B selected two blue panels for a missing blue cube. The raw trace survives; its explanation does not establish an internal cause.",
+      "mitigation": "Do not infer a model-size law or helpfulness bias. In an earlier matched permission test 70B did better than 8B (6/6 versus 5/6); fresh transfer reduced both to 5/6. Evidence E4."
+    }
+  ],
+  "limitations": [
+    "The fresh local development run scored 65/65 while scene_07_i2 still omitted its requested target placement due to an unobserved destination container. This is not a full-task success rate.",
+    "The held-out answer file contains 40 answers but has no published labels. It matches an earlier saved audit; later code edits are not a new full held-out run.",
+    "Runtime close-up crops come from the current input image, not stored exemplars. The organizer's crop wording warrants clarification; this report does not certify compliance.",
+    "Symbolic state checks depend on the observed graph and interpreted goals. They cannot prove that the instruction was understood, or that a real grasp and motion would succeed."
+  ],
+  "comparisons": [
+    {
+      "name": "Image-observer substitution in the fused pipeline",
+      "evidence": "E10",
+      "scope": "Existing Qwen control versus the recorded Apertus-vision branch; remote CSCS development diagnostic, non-compliant as a local submission measurement.",
+      "control": {
+        "vision": "qwen3.5-9b-mtp-q4",
+        "automatic_points": 65.0,
+        "grounding_correct": 40,
+        "grounding_total": 40,
+        "nonplan_correct": 10,
+        "nonplan_total": 10,
+        "false_asks_refusals": 0,
+        "plan_total": 40,
+        "scorer_report": "artifacts/report_fresh_scratch.json"
+      },
+      "treatment": {
+        "vision": "swiss-ai/Apertus-v1.5-8B",
+        "automatic_points": 37.625,
+        "grounding_correct": 16,
+        "grounding_total": 40,
+        "nonplan_correct": 9,
+        "nonplan_total": 10,
+        "false_asks_refusals": 5,
+        "plan_total": 40,
+        "scorer_report": "artifacts/report_proper_apertus_fused.json"
+      },
+      "interpretation": "The drop-in test favoured the Qwen front end in this pipeline; it does not establish internal model causes or a general limit on Apertus vision."
+    }
+  ],
+  "report_pages": [
+    {
+      "title": "The first pick is not the whole task",
+      "sections": [
+        {
+          "title": "A perfect score, an unfinished task",
+          "text": "We got a perfect development score with an unfinished task. Asked to put a yellow gear in a black tray, the pipeline picked up the gear and stopped. Vision had left the tray out of the scene graph. The automatic scorer checked the first pick and awarded full credit. That result gave us a better question to ask of every plan: after choosing the right object, does it actually finish the job? Our system separates image observation, language interpretation and symbolic execution so we can inspect where the request gets lost. [E5, E6]"
+        },
+        {
+          "title": "Who sees, who interprets, who checks",
+          "text": "Qwen3.5-9B inventories the RGB photo without seeing the instruction. YOLOE-26s re-grounds observations and SAM2 refines masks; the pick pixel comes from a mask interior. Close-ups supply structure when a label such as 'part' is insufficient. Apertus 1.5 8B Q8_0 first extracts instruction semantics, then binds them to observed IDs or returns a question or refusal. Schemas prevent invented IDs, not mistaken selections. We use non-thinking decoding at temperature 0. [E6]\n\nWe also tried Apertus behind the camera. Remote Apertus 1.5 8B observations, with YOLOE/SAM2 and local Apertus reasoning, scored 37.625/65 against the saved Qwen 65/65: 16/40 first picks, 9/10 non-plans correct and 5/40 false asks/refusals. This favoured Qwen in our pipeline. The API diagnostic is non-compliant as a local submission measurement. [E10]"
+        },
+        {
+          "title": "Deterministic action compilation and state verification",
+          "text": "Apertus proposes goals such as Goal(target='red_gear', destination='grey_tray'). The Python compiler orders blocker removal, stages obstructions on available trays and sequences picks and places for one gripper. A state verifier replays the actions: the gripper must be empty before a pick, holding before a place, and the support graph must stay acyclic. Plates and saucers cannot be picked; trays are destinations. Code also corrects selected language errors, including invented pickup destinations and extra objects in category requests. That makes this a hybrid system. The rules do some interpretation too, and can get it wrong. The output is a proposal for human review, not motor commands. [E5, E6]"
+        },
+        {
+          "title": "Measured local development result",
+          "text": "On the ten public scenes, the official scorer reports grounding {grounding_points:.1f}/35 ({grounding_correct}/{grounding_total} first-pick pixels) and safety-response scoring {safety_points:.1f}/30 ({safety_correct}/{safety_total} non-plan decisions, {plans_refused} false asks/refusals on plan rows). All 50 instructions have answers; the automatic total is {automatic_points:.1f}/65. All six categories receive full credit. The missing placement above still passes: this score measures first-pick grounding and response kind, not completion of every later action. The held-out file contains 40 answers from an earlier saved run; without its hidden labels, we report no accuracy. [E5, E7]"
+        },
+        {
+          "title": "One 12 GB GPU, end to end",
+          "text": "We ran the complete local pipeline on one RTX 4070 Ti with 12 GB VRAM. Perception and language models take turns on the GPU, using pinned local weights and llama.cpp. Per-scene child processes isolate observed server grammar faults. Run python run.py --data <scenes> --out results.json. Code is Apache-2.0, data CC BY 4.0. Model revisions and pinned weights are in src/grounded_intent/assets.py. [E5, E8]"
+        }
+      ]
+    },
+    {
+      "title": "What we learned by asking Apertus",
+      "sections": [
+        {
+          "title": "The schema was precise. The answer was wrong.",
+          "text": "We tried to make interpretation explicit enough to check: TaskProgram asked Apertus for operations, references, quantities, attributes and source spans. Even 'Pick up the green cone.' exposed trouble. Three local attempts returned complete, strict-schema JSON, but the quantity fields contradicted one another and absent values appeared as literal 'null' strings. A separate quantity-only probe granted arbitrary-choice permission on all five controls, including requests that granted none. The model had filled the form. It had not respected the distinctions the form was designed to express. Retrying the full parser repeated the invalid representation. [E1]"
+        },
+        {
+          "title": "Smaller questions and the limits of decomposition",
+          "text": "In a local matched pair, changing only 'in' to 'on' produced on for both: 1/2 correct. Self-review left the error unchanged; asking for the relation alone recovered 2/2. Focused calls composed valid programs on three simple instructions, with quantity supplied by the harness. Later remote variants gave the final state sole ownership of the action and corrected abstention contracts. Interpretation passes rose from 1 to 3 to 6 to 9 of 11, but only 6/11 final decision profiles passed. We made progress without clearing the acceptance gate. Source quotes proved where words came from, not that Apertus understood them. [E1, E2, E9]"
+        },
+        {
+          "title": "The prompt repair that did not travel",
+          "text": "With the rest held fixed, 'Choose any three compatible clips' granted choice, while 'Select any three compatible clips' did not. We clarified the difference between permission and enumeration. In remote CSCS diagnostics, the matched set improved from 9/10 to 10/10. On ten newly worded cases, both prompts scored 7/10. The fix stayed with its examples. These were component diagnostics, non-compliant as local submission measurements under the published local-only rule. [E3]"
+        },
+        {
+          "title": "70B found a substitute for an object that was absent",
+          "text": "In a remote CSCS smoke, Apertus 70B answered 'pick up the blue cube' with a plan to pick two blue panels. Its explanation called them 'rectangular panels' and the 'closest semantic match'. It described the mismatch and selected them anyway. Local 8B refused. This was not a controlled model-size comparison: serving location and model artifact differed. Earlier matched permission controls favoured 70B, 6/6 versus 5/6; both fell to 5/6 on fresh cases. We observed a substitution, not its internal cause or a general safety disadvantage of larger models. [E4]"
+        },
+        {
+          "title": "The next check belongs at the task boundary",
+          "text": "A verifier can approve a consistent sequence for an incomplete interpretation. Keep the requested targets, quantities and destinations independently, then check the plan against them. Fresh paraphrases and missing-receiver cases belong in that check; regenerate answers from the exact shipped configuration. Physical deployment is separate. These captures are RGB-only: robot_check='ok' means there was no depth data to check. Neither a mask-interior pixel nor a symbolic plan establishes a successful grasp or collision-free motion. No robot execution or certified safety is claimed. [E5-E8]"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "title": "The first pick was right.\nThe task was not done.",
+      "subtitle": "Grounded Intent | ZHAW: See It, Say It, Pick It",
+      "sections": [
+        {
+          "title": "Our approach in one sentence",
+          "text": "Apertus interprets the request; image-only vision supplies observations; explicit rules compile and check an ordered pick/place proposal."
+        },
+        {
+          "title": "The problem we found",
+          "text": "A full-credit first pick can hide a missing placement. We audit the complete task, not just the pixel that starts it."
+        },
+        {
+          "title": "The whole local pipeline on one GPU",
+          "text": "One RTX 4070 Ti · 12 GB VRAM | Qwen3.5-9B + Apertus 1.5 8B Q8_0\nSequential model loading; no robot execution."
+        }
+      ]
+    },
+    {
+      "title": "Apertus interprets. Code can still overrule it.",
+      "subtitle": "Model roles and the boundary between language and symbolic execution",
+      "sections": [
+        {
+          "title": "Qwen + YOLOE + SAM2",
+          "text": "RGB only\nObjects, masks, relations\nNo task instruction"
+        },
+        {
+          "title": "Apertus: semantics",
+          "text": "Instruction only\nAction, references, exclusions\nNon-thinking 8B Q8_0"
+        },
+        {
+          "title": "Apertus: grounding",
+          "text": "Instruction + scene graph\nObserved-ID goals\nOr ask / refuse"
+        },
+        {
+          "title": "Python rules + verifier",
+          "text": "Correct selected language errors\nOrder blockers and staging\nReplay symbolic states"
+        },
+        {
+          "title": "Official JSON + audit",
+          "text": "First-pick pixel + actions\nQuestion or refusal\nNo motor commands"
+        }
+      ],
+      "note": "Downstream rules include category, pickup and spatial interpretation. This is a hybrid system, not model-only reasoning."
+    },
+    {
+      "title": "Maximum public score. Not full-task success.",
+      "subtitle": "Fresh local benchmark run | 10 scenes, 50 instructions",
+      "sections": [
+        {
+          "title": "What the script measures",
+          "text": "Correct first-pick pixel and plan / ask / refuse. It does not score completion of every later action."
+        },
+        {
+          "title": "What the full plans reveal",
+          "text": "One placement request stops after the pick: vision missed the destination tray. A correct first pixel does not make that task complete."
+        },
+        {
+          "title": "Beyond the development set",
+          "text": "The saved held-out file has 40 answers.\nIts labels are unpublished;\nwe report no held-out accuracy.\n\nNo robot execution or certified safety is claimed."
+        }
+      ]
+    },
+    {
+      "title": "Where Apertus had difficulty",
+      "subtitle": "Observed Apertus failures | local probes and separately labelled remote diagnostics",
+      "sections": [
+        {
+          "title": "Smaller questions helped",
+          "text": "Local full parser: three invalid replies. A relation-only call recovered in/on from 1/2 to 2/2. Focused calls passed 3/3 simple controls, with quantity supplied by the harness. [E1, E2]"
+        },
+        {
+          "title": "Apertus behind the camera",
+          "text": "Remote Apertus vision + YOLOE/SAM2: 37.625/65; saved Qwen: 65/65. First picks: 16/40; non-plans: 9/10; false asks/refusals: 5/40. Local Apertus language reasoning. [E10]"
+        },
+        {
+          "title": "A fix that stayed with its examples",
+          "text": "Remote clarification: 9/10 to 10/10 on matched controls. On fresh wording, both prompts scored 7/10. The transfer test found no gain. [E3]"
+        },
+        {
+          "title": "A substitute instead of a refusal",
+          "text": "Remote 70B chose blue panels for a missing blue cube. Local 8B refused. We observed the substitution; its internal cause is unknown. [E4]"
+        }
+      ],
+      "note": "Remote CSCS probes are development diagnostics, non-compliant as submission measurements under the published local-only rule."
+    },
+    {
+      "title": "What we would keep. What we would test next.",
+      "subtitle": "Lessons from the experiments | Next steps before physical execution",
+      "sections": [
+        {
+          "title": "Keep Qwen on vision",
+          "text": "The drop-in vision test favoured Qwen in our pipeline. Keep Apertus on language. A mask-interior point still needs to belong to the object the user requested."
+        },
+        {
+          "title": "Check the original request",
+          "text": "Keep targets, quantities and destinations independently of the proposed plan. Otherwise a verifier can approve a task the user never asked for."
+        },
+        {
+          "title": "Test beyond the repaired example",
+          "text": "Use fresh paraphrases, negative controls and missing destinations. A prompt change that fixes its motivating cases has not yet earned a place in the pipeline."
+        },
+        {
+          "title": "Rerun the shipped configuration",
+          "text": "python run.py --data <scenes> --out results.json\nRegenerate answers from the exact shipped tree. Keep symbolic checks separate from physical grasp and motion validation."
+        }
+      ]
+    }
+  ]
+}

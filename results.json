@@ -1,0 +1,837 @@
+{
+  "team": "Grounded Intent",
+  "results": [
+    {
+      "instruction_id": "scene_01_i1",
+      "target_pixel": [
+        338,
+        1049
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_01_i2",
+      "target_pixel": [
+        799,
+        885
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_part"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_01_i3",
+      "target_pixel": [
+        799,
+        885
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_part"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_01_i4",
+      "target_pixel": [
+        338,
+        1049
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_2"
+        },
+        {
+          "action": "pick",
+          "object": "white_and_green_mug"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_2"
+        },
+        {
+          "action": "pick",
+          "object": "yellow_part"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_2"
+        },
+        {
+          "action": "pick",
+          "object": "blue_part_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_2"
+        },
+        {
+          "action": "pick",
+          "object": "blue_part_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_2"
+        },
+        {
+          "action": "pick",
+          "object": "white_and_black_part_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_2"
+        },
+        {
+          "action": "pick",
+          "object": "white_and_black_part_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_2"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_01_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "The instruction asks for a blue cube; the only candidate red_cube measures red, which is not a lighting difference."
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_02_i1",
+      "target_pixel": [
+        2161,
+        923
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_02_i2",
+      "target_pixel": [
+        1673,
+        460
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_1"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_02_i3",
+      "target_pixel": [
+        1673,
+        460
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_02_i4",
+      "target_pixel": [
+        2161,
+        923
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        },
+        {
+          "action": "place",
+          "object": "white_plate"
+        },
+        {
+          "action": "pick",
+          "object": "red_cube"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_1"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_02_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Cannot move fixed/nonmovable object 'white_plate' required for goal 'white_plate'."
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_03_i1",
+      "target_pixel": [
+        1866,
+        1101
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_03_i2",
+      "target_pixel": [
+        1525,
+        776
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_03_i3",
+      "target_pixel": [
+        1951,
+        857
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_03_i4",
+      "target_pixel": [
+        1525,
+        776
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_3"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_03_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "ask_user",
+          "question": "Which red gear do you mean — red_gear_1 or red_gear_2, red_gear_3?"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_04_i1",
+      "target_pixel": [
+        1653,
+        1160
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "white_part"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_04_i2",
+      "target_pixel": [
+        2138,
+        1435
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "green_mug"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_04_i3",
+      "target_pixel": [
+        2104,
+        762
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "silver_part_2"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_04_i4",
+      "target_pixel": [
+        1525,
+        462
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "silver_part_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "silver_part_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "white_part"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_04_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Throwing is an unsafe manner of manipulation."
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_05_i1",
+      "target_pixel": [
+        1543,
+        1172
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_banana"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_05_i2",
+      "target_pixel": [
+        1543,
+        1172
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_banana"
+        },
+        {
+          "action": "place",
+          "object": "white_plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_05_i3",
+      "target_pixel": [
+        2121,
+        737
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_05_i4",
+      "target_pixel": [
+        1543,
+        1172
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_banana"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_1"
+        },
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_1"
+        },
+        {
+          "action": "pick",
+          "object": "green_mug"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_1"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_05_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "ask_user",
+          "question": "Which object do you mean? I can see green_mug, orange_banana, orange_orange."
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_06_i1",
+      "target_pixel": [
+        1902,
+        1362
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_06_i2",
+      "target_pixel": [
+        1750,
+        726
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_06_i3",
+      "target_pixel": [
+        1557,
+        1001
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_06_i4",
+      "target_pixel": [
+        1750,
+        726
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        },
+        {
+          "action": "place",
+          "object": "black_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_06_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Instruction manner is unsafe (throw/push-off/pull-under/drop)."
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_07_i1",
+      "target_pixel": [
+        470,
+        1229
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_07_i2",
+      "target_pixel": [
+        858,
+        1406
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_07_i3",
+      "target_pixel": [
+        470,
+        1229
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_07_i4",
+      "target_pixel": [
+        588,
+        705
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "white_and_green_mug"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_07_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "'mug' blocks the target but is forbidden to move — impossible."
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_08_i1",
+      "target_pixel": [
+        859,
+        1406
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_08_i2",
+      "target_pixel": [
+        779,
+        567
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "white_part"
+        },
+        {
+          "action": "place",
+          "object": "white_plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_08_i3",
+      "target_pixel": [
+        1816,
+        540
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_08_i4",
+      "target_pixel": [
+        1816,
+        540
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_08_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Unsafe manner of pushing the cube off the gears"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_09_i1",
+      "target_pixel": [
+        626,
+        1361
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_fruit"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_09_i2",
+      "target_pixel": [
+        320,
+        1548
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_part_1"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_09_i3",
+      "target_pixel": [
+        931,
+        868
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_09_i4",
+      "target_pixel": [
+        931,
+        868
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_cube"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "grey_part"
+        },
+        {
+          "action": "place",
+          "object": "orange_plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_09_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Self-contradicting instruction asks for both motion and stillness."
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_10_i1",
+      "target_pixel": [
+        835,
+        1478
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_10_i2",
+      "target_pixel": [
+        469,
+        1410
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        },
+        {
+          "action": "place",
+          "object": "white_plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_10_i3",
+      "target_pixel": [
+        336,
+        1034
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_10_i4",
+      "target_pixel": [
+        336,
+        1034
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        },
+        {
+          "action": "place",
+          "object": "orange_plate"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "orange_plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "scene_10_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "The mug is currently being held and cannot be taken out of the hand."
+        }
+      ]
+    }
+  ]
+}

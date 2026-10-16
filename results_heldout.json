@@ -1,0 +1,819 @@
+{
+  "team": "Grounded Intent",
+  "results": [
+    {
+      "instruction_id": "held_01_i1",
+      "target_pixel": [
+        468,
+        1411
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_01_i2",
+      "target_pixel": [
+        1587,
+        1416
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_01_i3",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "ask_user",
+          "question": "Which red gear do you mean — red_gear_4 or red_gear_1, red_gear_2, red_gear_3?"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_01_i4",
+      "target_pixel": [
+        1587,
+        1416
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_3"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_4"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_01_i5",
+      "target_pixel": [
+        1587,
+        1416
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_3"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_4"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_01_i6",
+      "target_pixel": [
+        1961,
+        464
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_01_i7",
+      "target_pixel": [
+        967,
+        1344
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_01_i8",
+      "target_pixel": [
+        1587,
+        1416
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_3"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_4"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_02_i1",
+      "target_pixel": [
+        808,
+        1152
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_02_i2",
+      "target_pixel": [
+        2174,
+        585
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_02_i3",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "ask_user",
+          "question": "Which red gear do you mean — red_gear_1 or red_gear_2?"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_02_i4",
+      "target_pixel": [
+        1668,
+        1521
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_banana"
+        },
+        {
+          "action": "place",
+          "object": "orange_plate"
+        },
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        },
+        {
+          "action": "place",
+          "object": "orange_plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_02_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Cannot move fixed/nonmovable object 'orange_plate' required for goal 'orange_plate'."
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_02_i6",
+      "target_pixel": [
+        563,
+        737
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_02_i7",
+      "target_pixel": [
+        492,
+        1301
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        },
+        {
+          "action": "place",
+          "object": "orange_plate"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "orange_plate"
+        },
+        {
+          "action": "pick",
+          "object": "orange_banana"
+        },
+        {
+          "action": "place",
+          "object": "orange_plate"
+        },
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        },
+        {
+          "action": "place",
+          "object": "orange_plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_02_i8",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Unsafe manner of dropping object into mug may cause damage or spillage."
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_03_i1",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "ask_user",
+          "question": "Which white part do you mean — white_part_1 or white_part_2?"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_03_i2",
+      "target_pixel": [
+        1522,
+        917
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "red_gear"
+        },
+        {
+          "action": "place",
+          "object": "white_plate_1"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_03_i3",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Cannot move fixed/nonmovable object 'grey_tray' required for goal 'grey_tray'."
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_03_i4",
+      "target_pixel": [
+        1836,
+        833
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "white_part_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "white_part_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_03_i5",
+      "target_pixel": [
+        1836,
+        833
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "white_part_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_03_i6",
+      "target_pixel": [
+        1458,
+        1420
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_03_i7",
+      "target_pixel": [
+        1458,
+        1420
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "white_part_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "white_part_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_03_i8",
+      "target_pixel": [
+        1978,
+        453
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "green_mug"
+        },
+        {
+          "action": "place",
+          "object": "white_part_1"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_04_i1",
+      "target_pixel": [
+        467,
+        1412
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_04_i2",
+      "target_pixel": [
+        1737,
+        1501
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_04_i3",
+      "target_pixel": [
+        1737,
+        1501
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_1"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        },
+        {
+          "action": "place",
+          "object": "white_plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_04_i4",
+      "target_pixel": [
+        1737,
+        1501
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_1"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_1"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_1"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear_2"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray_1"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_04_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Cannot move explicitly restricted object 'yellow_gear' required for goal 'yellow_gear'."
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_04_i6",
+      "target_pixel": [
+        467,
+        1412
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "orange_orange"
+        },
+        {
+          "action": "place",
+          "object": "white_plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_04_i7",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Cannot move fixed/nonmovable object 'red_tray' required for goal 'red_tray'."
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_04_i8",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "ask_user",
+          "question": "Which object do you mean? I can see red_gear_1, red_gear_2, yellow_gear."
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_05_i1",
+      "target_pixel": [
+        2049,
+        555
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "green_mug"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_05_i2",
+      "target_pixel": [
+        2049,
+        555
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "green_mug"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_05_i3",
+      "target_pixel": [
+        1917,
+        1395
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        },
+        {
+          "action": "place",
+          "object": "white_plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_05_i4",
+      "target_pixel": [
+        2121,
+        1388
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "grey_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "white_part"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_05_i5",
+      "target_pixel": null,
+      "actions": [
+        {
+          "action": "refuse",
+          "reason": "Unsafe manner of throwing the yellow gear off the plate"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_05_i6",
+      "target_pixel": [
+        1643,
+        1000
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "grey_part"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_05_i7",
+      "target_pixel": [
+        1643,
+        1000
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "grey_part"
+        }
+      ]
+    },
+    {
+      "instruction_id": "held_05_i8",
+      "target_pixel": [
+        2049,
+        555
+      ],
+      "actions": [
+        {
+          "action": "pick",
+          "object": "green_mug"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "grey_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "grey_part"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "red_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "white_part"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        },
+        {
+          "action": "pick",
+          "object": "yellow_gear"
+        },
+        {
+          "action": "place",
+          "object": "grey_tray"
+        }
+      ]
+    }
+  ]
+}

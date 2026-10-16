@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Grounded Intent — Pipeline workspace</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#instruction">Skip to instruction</a>
+  <header class="masthead">
+    <a class="brand" href="/" aria-label="Grounded Intent home">
+      <span class="brand-mark" aria-hidden="true">gi.</span>
+      <strong>Grounded Intent</strong>
+    </a>
+    <span class="masthead-context">ZHAW <span class="separator">/</span> See It, Say It, Pick It</span>
+    <span class="mode-label">Review only</span>
+  </header>
+  <main>
+    <div class="page-heading">
+      <div><h1>Pipeline workspace</h1><p class="intro">Choose a scene, write an instruction, inspect the result.</p></div>
+      <p class="safety-note">No robot execution.<br> Symbolic checks are not safety certification.</p>
+    </div>
+    <p id="page-error" class="error-message" role="alert" hidden></p>
+    <div class="workspace">
+      <section class="scene-panel panel" aria-labelledby="scene-heading">
+        <div class="panel-heading">
+          <h2 id="scene-heading"><span class="section-number">01</span> Scene</h2>
+          <span id="object-count" class="pill">Loading</span>
+        </div>
+        <div class="scene-controls">
+          <div class="field scene-field"><label for="scene-select">Scene</label><select id="scene-select" disabled><option value="">Loading scenes…</option></select></div>
+          <label class="checkbox-label"><input id="overlay-toggle" type="checkbox" checked>Object overlays</label>
+          <button id="scene-reload" class="secondary-button" type="button" disabled aria-label="Reload the selected scene">Reload</button>
+        </div>
+        <div id="image-stage" class="image-stage" aria-busy="true">
+          <canvas id="scene-canvas" role="img" aria-label="Scene image; select an object below to inspect it" hidden></canvas>
+          <div id="image-placeholder" class="image-placeholder"><span class="placeholder-frame" aria-hidden="true"></span><strong>Loading scenes</strong><span>Reading the configured image folder.</span></div>
+          <div id="scene-loading" class="loading-label" hidden><span class="spinner" aria-hidden="true"></span>Analyzing the image…</div>
+        </div>
+        <div class="scene-caption"><p id="scene-status" role="status" aria-live="polite">Connecting…</p><span id="image-dimensions">Original image coordinates</span></div>
+        <div class="observations">
+          <div class="section-heading"><h3>Objects</h3><span class="muted">Select a number or click the image</span></div>
+          <div id="object-list" class="object-list"><p class="empty-text">Objects appear after image analysis.</p></div>
+          <div id="selected-detail" class="selection-detail" aria-live="polite">Select an object to inspect its evidence.</div>
+        </div>
+        <details class="scene-details"><summary>Relations &amp; perception notes</summary><div id="relations" class="details-content"><p class="empty-text">No scene loaded.</p></div></details>
+      </section>
+      <section class="reason-panel panel" aria-labelledby="intent-heading">
+        <div class="panel-heading"><h2 id="intent-heading"><span class="section-number">02</span> Instruction</h2><span class="model-label">Apertus</span></div>
+        <form id="instruction-form">
+          <label for="instruction">What should the robot do?</label>
+          <textarea id="instruction" rows="3" maxlength="2000" placeholder="Describe a pick or placement in this scene…" required aria-describedby="instruction-help character-count"></textarea>
+          <div class="input-footnote"><span id="instruction-help">Use your own words.</span><span id="character-count">0 / 2000</span></div>
+          <button id="submit-button" class="primary-button" type="submit" disabled><span id="submit-label">Run instruction</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="section-heading results-heading"><h2><span class="section-number">03</span> Decision</h2><span id="decision-badge" class="pill">Not run</span></div>
+        <p id="decision-status" class="decision-status" role="status" aria-live="polite">Load a scene to get started.</p>
+        <div id="decision-result" hidden>
+          <p id="decision-instruction" class="decision-instruction"></p>
+          <div id="decision-message" class="decision-message"></div>
+          <section id="accepted-plan" class="result-section" aria-labelledby="verified-heading">
+            <div class="section-heading"><h3 id="verified-heading">Action sequence</h3><span class="muted">Nothing executed</span></div>
+            <ol id="verified-actions" class="action-list"></ol>
+            <p id="verified-empty" class="empty-text" hidden>No movement actions accepted.</p>
+            <p id="target-detail" class="target-detail"></p>
+          </section>
+          <div id="runtime-stats" class="runtime-stats"></div>
+          <details id="check-details" class="result-details"><summary id="check-summary">Verification checks</summary><ul id="check-list" class="check-list"></ul></details>
+          <details id="proposal-details" class="result-details"><summary>Before verification</summary><div class="details-content"><ol id="proposed-actions" class="action-list"></ol><p id="proposal-empty" class="empty-text" hidden>No movement proposed.</p><p id="forbidden-movement" class="warning-text" hidden></p></div></details>
+          <details id="warning-details" class="result-details" hidden><summary id="warning-summary">Notes</summary><ul id="decision-warnings" class="warning-list" hidden></ul></details>
+          <details class="result-details"><summary>JSON &amp; full audit</summary><div class="details-content"><h3>Official output</h3><pre id="official-json" tabindex="0"></pre><h3>Decision audit</h3><pre id="audit-json" tabindex="0"></pre></div></details>
+        </div>
+      </section>
+    </div>
+    <footer><span>Qwen sees the image. Apertus interprets the request. Code checks the sequence.</span><span>Human review required</span></footer>
+  </main>
+</body>
+</html>
